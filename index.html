@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>IMC calc</title>
+
+    <script src="./main.js" type="module"></script>
+  </head>
+  
+  <body>
+    <main>
+      <div class="alert-error">
+        <p>Digite somente números</p>
+      </div>
+
+      <form action="">
+        <h1>Cálculo de IMC</h1>
+
+        <div class="input-wrapper">
+          <label for="weight">Peso (kg)</label>
+
+          <input id="weight" placeholder="60" type="number" required>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="height">Altura (m)</label>
+
+          <input id="height" placeholder="165" type="text" required>
+        </div>
+
+        <button>
+          Calcular IMC
+
+          <img src="./assets/arrow-up-right.svg" alt="Seta apontando para a direita">
+        </button>
+      </form>
+
+      <div class="modal-wrapper">
+        <div class="modal">
+          <button id="close-modal"><img src="./assets/close.svg" alt="Ícone de fechar"></button>
+
+          <h2></h2>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
