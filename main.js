@@ -1,38 +1,9 @@
+import { modal, handleCloseModal } from './js/modal.js'
+import { alert } from './js/alert.js'
+
 const form = document.querySelector('form')
 const inputWeight = document.getElementById('weight')
 const inputHeight = document.getElementById('height')
-
-const modal = {
-  imcModal: document.querySelector('.modal-wrapper'),
-  
-  imcResult: document.querySelector('h2'),
-  
-  imcModalCloseButton: document.getElementById('close-modal'),
-  
-  open: () => {
-    modal.imcModal.classList.add('visible')
-  },
-  
-  close: () => {
-    modal.imcModal.classList.remove('visible')
-  }
-}
-
-const handleCloseModal = () => {
-  modal.close()
-}
-
-const alert = {
-  alertError: document.querySelector('.alert-error'),
-
-  open: () => {
-    alert.alertError.classList.add('visible')
-  },
-
-  close: () => {
-    alert.alertError.classList.remove('visible')
-  }
-}
 
 form.onsubmit = (event) => {
   event.preventDefault()
@@ -45,7 +16,7 @@ form.onsubmit = (event) => {
     alert.open()
     setTimeout(() => {
       alert.close()
-    }, 5000)
+    }, 3000)
   } else {
     modal.imcResult.textContent = `Seu IMC é de ${imcCalc}`
     modal.open()
